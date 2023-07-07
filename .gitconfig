@@ -1,0 +1,6 @@
+[user]
+	email = 62081192+leonardodimarchi@users.noreply.github.com
+	name = leonardo dimarchi
+[credential]
+	credentialStore = gpg
+	helper = store
