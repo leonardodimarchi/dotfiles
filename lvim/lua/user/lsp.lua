@@ -58,16 +58,26 @@ formatters.setup({
       "markdown.mdx",
       "graphql",
       "handlebars",
-      "json",
     }
   },
 })
+
+formatters.setup({
+  {
+    command = "prettierd",
+    filetypes = {
+      "html",
+      "scss"
+    }
+  },
+})
+
 
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup({
   {
     command = "eslint_d",
-    filetypes = { "javascript", "typescript", "typescriptreact", "json" }
+    filetypes = { "javascript", "typescript", "typescriptreact" }
   },
 })
 
