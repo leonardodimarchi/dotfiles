@@ -16,6 +16,7 @@ export CHROME_BIN=chromium
 export EDITOR='lvim'
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+bindkey '^ ' autosuggest-accept
 
 zstyle ':completion:*:*:git:*' script ~/.zsh/functions/git-completion.bash
 fpath=(~/.zsh/functions $fpath)
@@ -29,6 +30,7 @@ alias ls="exa --icons"
 alias mux="tmuxinator"
 
 . ~/.asdf/plugins/java/set-java-home.zsh
+. ~/.asdf/plugins/golang/set-env.zsh
 
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
