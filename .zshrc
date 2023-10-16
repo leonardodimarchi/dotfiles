@@ -14,6 +14,7 @@ export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$HOME/Android/Sdk/platform-tools:$
 export CHROME_EXECUTABLE=chromium
 export CHROME_BIN=chromium
 export EDITOR='lvim'
+export BROWSER=/usr/bin/chromium
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^ ' autosuggest-accept
