@@ -40,34 +40,16 @@ ts.setup({
 -- })
 
 local formatters = require "lvim.lsp.null-ls.formatters"
-formatters.setup({
-  {
-    command = "eslint_d",
-    filetypes = {
-      "javascript",
-      "javascriptreact",
-      "typescript",
-      "typescriptreact",
-      "vue",
-      "css",
-      "scss",
-      "less",
-      "html",
-      "yaml",
-      "markdown",
-      "markdown.mdx",
-      "graphql",
-      "handlebars",
-    }
-  },
-})
 
 formatters.setup({
   {
     command = "prettierd",
     filetypes = {
       "html",
-      "scss"
+      "scss",
+      "typescript",
+      "javascript",
+      "typescriptreact"
     }
   },
 })
@@ -76,7 +58,7 @@ formatters.setup({
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup({
   {
-    command = "eslint_d",
+    command = "eslint",
     filetypes = { "javascript", "typescript", "typescriptreact" }
   },
 })
@@ -87,3 +69,13 @@ vim.diagnostic.config({
     focusable = true
   }
 })
+
+lvim.autocommands = {
+  {
+    "BufReadPost",
+    {
+      pattern = { "*.erb", "*.eruby" },
+      command = "set syntax=html",
+    }
+  },
+}
